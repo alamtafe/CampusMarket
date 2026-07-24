@@ -1,0 +1,138 @@
+Utilisateur  --->  Créer compte
+Utilisateur  --->  Se connecter
+Utilisateur  --->  Consulter annonces
+Utilisateur  --->  Rechercher annonce
+Utilisateur  --->  Publier annonce
+Utilisateur  --->  Modifier annonce
+Utilisateur  --->  Supprimer annonce
+Utilisateur  --->  Ajouter favoris
+Utilisateur  --->  Contacter vendeur
+
+Admin  --->  Se connecter
+Admin  --->  Gérer utilisateurs
+Admin  --->  Gérer annonces
+Admin  --->  Gérer catégories
+
+user:
+id
+nom
+email
+mot_de_passe
+telephone
+date_creation
+catégories:
+id
+nom_categorie
+
+annonces:
+id
+titre
+description
+prix
+ville
+date_publication
+user_id
+categorie_id
+
+image_annonces:
+id
+image
+annonce_id
+
+favoris:
+user_id
+annonce_id
+
+Admin:
+id
+email
+mot_de_passe
+
+Utilisateur:
+Inscription
+Connexion
+Publier annonce
+Modifier annonce
+Supprimer annonce
+Rechercher annonce
+Filtrer annonces
+Voir détails annonce
+Ajouter favoris
+Contacter vendeur (WhatsApp/Téléphone)
+
+Admin:
+Gestion utilisateurs
+Gestion annonces
+Gestion catégories
+
+Base de données:
+users
+annonces
+images_annonce
+categories
+favoris
+admin
+
+| Donnée             | Description                  | Type    | Taille | Remarque        |
+| ------------------ | ---------------------------- | ------- | ------ | --------------- |
+| id_user            | Identifiant de l’utilisateur | INT     | 11     | Clé primaire    |
+| nom                | Nom de l’utilisateur         | VARCHAR | 50     | Obligatoire     |
+| email              | Email de l’utilisateur       | VARCHAR | 100    | Unique          |
+| mot_de_passe       | Mot de passe                 | VARCHAR | 255    | Obligatoire     |
+| telephone          | Numéro de téléphone          | VARCHAR | 20     | Pour contact    |
+| date_creation      | Date de création du compte   | DATE    | —      | Automatique     |
+| id_categorie       | Identifiant de la catégorie  | INT     | 11     | Clé primaire    |
+| nom_categorie      | Nom de la catégorie          | VARCHAR | 50     | Ex: Téléphone   |
+| id_annonce         | Identifiant de l’annonce     | INT     | 11     | Clé primaire    |
+| titre              | Titre de l’annonce           | VARCHAR | 100    | Obligatoire     |
+| description        | Description de l’annonce     | TEXT    | —      | Détails produit |
+| prix               | Prix du produit              | DECIMAL | 10,2   | Obligatoire     |
+| ville              | Ville du vendeur             | VARCHAR | 50     | Ex: Casablanca  |
+| date_publication   | Date de publication          | DATE    | —      | Automatique     |
+| id_image           | Identifiant de l’image       | INT     | 11     | Clé primaire    |
+| image              | Chemin de l’image            | VARCHAR | 255    | Ex: img1.jpg    |
+| id_favori          | Identifiant favori           | INT     | 11     | Clé primaire    |
+| id_admin           | Identifiant administrateur   | INT     | 11     | Clé primaire    |
+| email_admin        | Email administrateur         | VARCHAR | 100    | Unique          |
+| mot_de_passe_admin | Mot de passe admin           | VARCHAR | 255    | Obligatoire     |
+
+UTILISATEUR -------- PUBLISH -------- ANNONCE -------- CONTENIR -------- IMAGE_ANNONCE
+      |                                  |
+      |                                  |
+    AJOUTER                            CLASSER
+      |                                  |
+      ----------- ANNONCE            CATEGORIE
+
+
+ADMIN -------- GERER -------- UTILISATEUR
+ADMIN -------- GERER -------- ANNONCE
+ADMIN -------- GERER -------- CATEGORIE
+
+UTILISATEUR (0,n) ---- Publier ---- (1,1) ANNONCE
+
+CATEGORIE (0,n) ---- Classer ---- (1,1) ANNONCE
+
+ANNONCE (1,n) ---- Contenir ---- (1,1) IMAGE
+
+UTILISATEUR (0,n) ---- Favoriser ---- (0,n) ANNONCE
+
+index.html
+login.html
+register.html
+annonces.html
+details.html
+ajouter-annonce.html
+mes-annonces.html
+favoris.html
+
+admin/
+    dashboard.html
+    utilisateurs.html
+    annonces.html
+    categories.html
+
+css/
+    style.css
+
+js/
+    main.js
