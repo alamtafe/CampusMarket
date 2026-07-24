@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">CampusMarket</a>
+
+        <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="annonces.html">Annonces</a>
+        <a href="login.html" id="login">Connexion</a>
+        <a href="#" id="logout">Déconnexion</a>
+        <a href="register.html" id="register">Inscription</a>
+        <a href="mes-annonces.html" id="mes-annonces">Mes annonces</a>
+        </div>
+        <input id="search" type="text" placeholder="Rechercher une annonce">
+    </nav>
+
+<main class="home-page">
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">
+                <i class="fa-solid fa-store"></i>
+                Marketplace simple et rapide
+            </span>
+
+            <h2>Bienvenue sur CampusMarket</h2>
+            <p>Achète, vends et contacte les vendeurs facilement depuis une seule plateforme.</p>
+
+            <a href="#" class="btn-publier" id="btn-publier-home">
+                <i class="fa-solid fa-plus"></i>
+                Publier une annonce
+            </a>
+        </div>
+    </section>
+
+    <section class="home-stats">
+        <div class="stat-card">
+            <i class="fa-solid fa-bullhorn"></i>
+            <div>
+                <h3 id="total-annonces">0</h3>
+                <p>Annonces publiées</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-users"></i>
+            <div>
+                <h3>Campus</h3>
+                <p>Achat et vente entre étudiants</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+                <h3>Simple</h3>
+                <p>Contact direct avec le vendeur</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="section-title">
+            <h2>Catégories</h2>
+            <p>Choisissez une catégorie pour filtrer les annonces.</p>
+        </div>
+
+        <div class="categories">
+            <a href="#" class="categorie cat-phone" data-category="Téléphones">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Téléphones</span>
+            </a>
+
+            <a href="#" class="categorie cat-pc" data-category="Informatique">
+                <i class="fa-solid fa-laptop"></i>
+                <span>Informatique</span>
+            </a>
+
+            <a href="#" class="categorie cat-clothes" data-category="Vêtements">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Vêtements</span>
+            </a>
+
+            <a href="#" class="categorie cat-books" data-category="Livres">
+                <i class="fa-solid fa-book"></i>
+                <span>Livres</span>
+            </a>
+
+            <a href="#" class="categorie cat-services" data-category="Services">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Services</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="section-title">
+            <h2>Annonces récentes</h2>
+            <p>Découvrez les dernières annonces publiées.</p>
+        </div>
+
+        <div id="liste-annonces"></div>
+    </section>
+
+</main>
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>CampusMarket</h3>
+            <p>
+                Marketplace pour acheter et vendre facilement entre étudiants.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="index.html">Accueil</a>
+            <a href="annonces.html">Annonces</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CampusMarket - Tous droits réservés.
+    </div>
+
+</footer>
+<div id="popup-login" class="popup">
+
+    <div class="popup-content login-popup">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <h3>Connexion requise</h3>
+
+        <p>Vous devez vous connecter ou créer un compte pour publier une annonce.</p>
+
+        <div class="popup-buttons">
+
+            <a href="login.html" class="popup-login-btn">
+                Se connecter
+            </a>
+
+            <a href="register.html" class="popup-register-btn">
+                Créer un compte
+            </a>
+    </div>
+
+        <button id="close-login-popup" class="popup-close">
+            Annuler
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/afficher-annonces.js"></script>
+</body>
+</html>
