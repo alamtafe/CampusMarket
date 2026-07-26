@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+    <a href="index.html" class="logo">CampusMarket</a>
+
+    <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="annonces.html">Annonces</a>
+        <a href="login.html" id="login">Connexion</a>
+        <a href="#" id="logout">Déconnexion</a>
+        <a href="register.html" id="register">Inscription</a>
+        <a href="mes-annonces.html" id="mes-annonces">Mes annonces</a>
+    </div>
+
+    <input id="search" type="text" placeholder="Rechercher une annonce">
+</nav>
+
+<main class="annonces-page">
+
+    <section class="annonces-hero">
+        <span class="hero-badge">
+            <i class="fa-solid fa-layer-group"></i>
+            Catalogue complet
+        </span>
+
+        <h2>Toutes les annonces</h2>
+        <p>Explorez les produits disponibles et contactez directement les vendeurs.</p>
+    </section>
+
+    <section class="home-section">
+        <div class="section-title">
+            <h2>Annonces disponibles</h2>
+            <p>Trouvez facilement ce que vous cherchez.</p>
+        </div>
+
+        <div id="liste-annonces"></div>
+    </section>
+
+</main>
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>CampusMarket</h3>
+            <p>
+                Marketplace pour acheter et vendre facilement entre étudiants.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="index.html">Accueil</a>
+            <a href="annonces.html">Annonces</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CampusMarket - Tous droits réservés.
+    </div>
+
+</footer>
+<script src="js/main.js"></script>
+<script src="js/afficher-annonces.js"></script>
+</body>
+</html>
