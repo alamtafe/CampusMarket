@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main class="publish-page">
+
+    <section class="publish-left">
+
+        <h1>CampusMarket</h1>
+
+        <h2>Publiez en quelques minutes 🚀</h2>
+
+        <p>
+            Déposez votre annonce gratuitement et trouvez rapidement un acheteur.
+        </p>
+
+        <div class="publish-info">
+            <i class="fa-solid fa-bolt"></i>
+            Publication instantanée
+        </div>
+
+        <div class="publish-info">
+            <i class="fa-solid fa-eye"></i>
+            Visible par tous les étudiants
+        </div>
+
+        <div class="publish-info">
+            <i class="fa-solid fa-comments"></i>
+            Contact direct via WhatsApp
+        </div>
+
+    </section>
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+    <section class="form-card">
+        <a href="index.html" class="close-page">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <form id="form-annonce">
+            <div class="photo-section">
+                <p>Photos de l'annonce</p>
+                <div class="photos-row" id="photos-row">
+                    <label for="images" class="upload-box">
+                    <i class="fa-solid fa-camera"></i>
+                    <span id="photo-count">0/8</span>
+                    </label>
+                </div>
+                <input id="images" type="file" accept="image/*" multiple>
+                <p id="image-error" class="error-message">
+                    Une image est obligatoire.
+                </p>
+            </div>
+            <input id="titre" type="text" placeholder="Titre de l'annonce">
+            <textarea id="description" placeholder="Description"></textarea>
+            <input id="prix" type="number" placeholder="Prix">
+            <input id="ville" type="text" placeholder="Ville">
+            <select id="categorie">
+                <option value="Téléphones">Téléphones</option>
+                <option value="Informatique">Informatique</option>
+                <option value="Vêtements">Vêtements</option>
+                <option value="Livres">Livres</option>
+                <option value="Services">Services</option>
+            </select>
+            <input id="telephone" type="text" placeholder="Téléphone">
+            <button id="btn-ajouter" type="button">Publier l'annonce</button>
+        </form>
+
+    </section>
+
+</main>   
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>CampusMarket</h3>
+            <p>
+                Marketplace pour acheter et vendre facilement entre étudiants.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="index.html">Accueil</a>
+            <a href="annonces.html">Annonces</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CampusMarket - Tous droits réservés.
+    </div>
+
+</footer>
+    <script src="js/ajouter-annonce.js"></script>
+</body>
+</html>
