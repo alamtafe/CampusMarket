@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+    <a href="index.html" class="logo">CampusMarket</a>
+
+    <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="annonces.html">Annonces</a>
+        <a href="#" id="logout">Déconnexion</a>
+        <a href="mes-annonces.html">Mes annonces</a>
+    </div>
+</nav>
+
+<main class="dashboard-page">
+
+    <section class="dashboard-hero">
+        <div>
+            <span class="hero-badge">
+                <i class="fa-solid fa-user"></i>
+                Espace vendeur
+            </span>
+
+            <h2>Mes annonces</h2>
+            <p>Gérez vos annonces, modifiez les informations ou supprimez les produits déjà vendus.</p>
+            <a href="ajouter-annonce.html" class="btn-publier">
+                <i class="fa-solid fa-plus"></i>
+                Nouvelle annonce
+            </a>
+        </div>
+
+    </section>
+
+    <section class="home-section">
+        <div class="section-title">
+            <h2>Liste de mes annonces</h2>
+            <p>Toutes les annonces publiées avec votre compte.</p>
+        </div>
+
+        <div id="mes-annonces"></div>
+    </section>
+    
+
+</main>
+
+<div id="popup-supprimer" class="popup">
+
+    <div class="popup-content">
+
+        <i class="fa-solid fa-trash"></i>
+
+        <h3>Supprimer l'annonce ?</h3>
+
+        <p>Cette action est irréversible.</p>
+
+        <div class="popup-buttons">
+
+            <button id="annuler-supprimer">
+                Annuler
+            </button>
+
+            <button id="confirmer-supprimer">
+                Supprimer
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>CampusMarket</h3>
+            <p>
+                Marketplace pour acheter et vendre facilement entre étudiants.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="index.html">Accueil</a>
+            <a href="annonces.html">Annonces</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 CampusMarket - Tous droits réservés.
+    </div>
+
+</footer>
+<script src="js/main.js"></script>
+<script src="js/mes-annonces.js"></script>
+
+</body>
+</html>
